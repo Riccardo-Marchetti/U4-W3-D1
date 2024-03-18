@@ -8,4 +8,4 @@ JOIN public."Clienti" c on a.idcliente = c.numerocliente
 WHERE a.importo::numeric < 1000
 6) SELECT numerofattura, importo, iva, datafattura, denominazione FROM public."Fatture" a JOIN public."Fornitori" b on a.numerofornitore = b.numerofornitore
 7)
-8)
+8) SELECT COUNT(*), SUM(importo) FROM public."Fatture" GROUP BY importo;
